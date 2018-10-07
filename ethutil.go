@@ -8,6 +8,7 @@ import (
 
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/common/hexutil"
+	"github.com/ethereum/go-ethereum/crypto"
 	"github.com/shopspring/decimal"
 )
 
@@ -111,4 +112,11 @@ func SigRSV(isig interface{}) ([32]byte, [32]byte, uint8) {
 	V := uint8(vI + 27)
 
 	return R, S, V
+}
+
+// LogTopicHash generates the log topic hash given the event function declaration signature
+func LogTopicHash(fnsig string) common.Hash {
+	eventSignature := []byte(fnsig)
+	hash := crypto.Keccak256Hash(eventSignature)
+	return hash
 }

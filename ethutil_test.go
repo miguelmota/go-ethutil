@@ -1,6 +1,7 @@
 package ethutil
 
 import (
+	"fmt"
 	"math/big"
 	"testing"
 
@@ -131,6 +132,15 @@ func TestSigRSV(t *testing.T) {
 		t.FailNow()
 	}
 	if v != expectedV {
+		t.FailNow()
+	}
+}
+
+func TestLogTopicHash(t *testing.T) {
+	hash := LogTopicHash("Transfer(address,address,uint256)")
+	expected := "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef"
+	fmt.Println(hash.Hex())
+	if hash.Hex() != expected {
 		t.FailNow()
 	}
 }
