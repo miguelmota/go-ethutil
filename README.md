@@ -1,10 +1,12 @@
-<h1 align="center">
+<h3 align="center">
   <br />
   <img src="https://user-images.githubusercontent.com/168240/41082466-51af365a-69e3-11e8-938d-7c6316f2fc7e.png" alt="go-ethutil" width="600" />
   <br />
   <br />
   <br />
-</h1>
+</h3>
+
+# go-ethutil
 
 > Ethereum utility functions for Go.
 
