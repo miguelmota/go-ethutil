@@ -6,5 +6,6 @@ require (
 	github.com/ethereum/go-ethereum v1.8.10
 	github.com/kr/pretty v0.1.0 // indirect
 	github.com/shopspring/decimal v0.0.0-20180301213236-69b3a8ad1f5f
+	golang.org/x/crypto v0.0.0-20190418165655-df01cb2cc480 // indirect
 	gopkg.in/check.v1 v1.0.0-20180628173108-788fd7840127 // indirect
 )
