@@ -83,6 +83,8 @@ func ToWei(iamount interface{}, decimals int) *big.Int {
 		amount = decimal.NewFromFloat(v)
 	case int64:
 		amount = decimal.NewFromFloat(float64(v))
+	case int:
+		amount = decimal.NewFromFloat(float64(v))
 	case decimal.Decimal:
 		amount = v
 	case *decimal.Decimal:
